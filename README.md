@@ -3,13 +3,13 @@ Programming and Data Structures
 
 C++ implementations I learned from COSC 2436
 
-##Topics
+## Topics
 
-###Arrays
+### Arrays
 
-###Linked lists
+### Linked lists
 
-###Sorting 
+### Sorting 
 - Bubble sort
 - Insertion sort
 - Selection sort
