@@ -1,2 +1,2 @@
-# COSC2436
+# cosc2436
 Programming and Data Structures
