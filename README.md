@@ -14,3 +14,5 @@ C++ implementations I learned from COSC 2436
 - Insertion sort
 - Selection sort
 - Shell sort
+- Radix sort
+- Quick sort
