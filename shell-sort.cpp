@@ -1,34 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void print(int a[], int size);
-void interleaved(int a[], int size, int gap);
-void shellSort(int a[], int size, int gaps[], int nGaps);
-
-int main(){
-    
-    //shell sort testing
-    int testArray[5] = {5, 4, 2, 3, 1};
-    int testGaps[3] = {4,2,1};
-
-    cout << "Original: ";
-    print(testArray, 5);
-
-    shellSort(testArray, 5, testGaps, 3); 
-
-    cout << "Result: ";
-    print(testArray, 5);
-
-    return 0; 
-}
-
-void print(int a[], int size){
-    cout << a[0];
-    for (int i = 1; i < size; i++){
-        cout << " " << a[i];
-    }
-    cout << endl; 
-}
+#include "shell-sort.h"
 
 //sort an interleaved array created from original array using a gap value 
 void interleaved(int a[], int size, int gap){
@@ -50,6 +23,5 @@ void shellSort(int a[], int size, int gaps[], int nGaps){
     for(int i = 0; i < nGaps; i++){
         int gap = gaps[i]; 
         interleaved(a, size, gap);
-        print(a,size); 
     }
 }
