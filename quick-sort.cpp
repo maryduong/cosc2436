@@ -49,3 +49,28 @@ int quickSelect(int arr[], int low, int high, int k){ //only partially sorts arr
 
     return quickSelect(arr, lastLow + 1, high, k); //else recur right side
 }
+
+void anotherQuickSort(int* array, int low, int high){
+    if(low >= high){ //return if nothing to sort
+        return;
+    }
+
+    int pivotIndex = high; //pivot is right most element
+
+    //use pivot element to partition elements: less than | pivot | greater than
+    int tempIndex = pivotIndex - 1;
+
+    while(array[pivotIndex] <  array[tempIndex]){
+        tempIndex--; 
+    }
+    tempIndex++;
+
+    int tempVal = array[tempIndex];
+    array[tempIndex] = array[pivotIndex];
+    array[pivotIndex] = tempVal; 
+    pivotIndex = tempIndex; 
+    //
+
+    anotherQuickSort(array, low, pivotIndex-1); //sort left
+    anotherQuickSort(array, pivotIndex+1, high); //sort right
+}
