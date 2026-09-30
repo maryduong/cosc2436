@@ -5,6 +5,7 @@ using namespace std;
 #include "radix-sort.h"
 #include "quick-sort.h"
 #include "merge-sort.h"
+#include "heap-sort.h"
 #include "utilities.h"
 
 int main(){
