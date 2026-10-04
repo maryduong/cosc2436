@@ -2,9 +2,9 @@
 
 void maxHeapDown(int parentIndex, int array[], int size){
     int childIndex = parentIndex * 2 + 1; //first child (left side)
-    int parentValue = array[parentIndex];
 
     while(childIndex < size){ //if possible children exist
+        int parentValue = array[parentIndex];
         int maxValue = parentValue; 
         int maxIndex = -1; 
 

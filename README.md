@@ -17,3 +17,8 @@ C++ implementations I learned in COSC 2436
 - Radix sort
 - Quick sort O(n^2) -> avg: O(nlogn)
 - Merge sort O(nlogn)
+- Heap sort O(nlogn)
+
+### Stacks & Queues
+- Stacks (LIFO)
+- Queues (FIFO)
