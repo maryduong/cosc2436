@@ -1,9 +1,6 @@
 #pragma once
 
-struct Node{
-    int value; 
-    Node* next;
-};
+#include "node.h"
 
 class LinkedListStack{
     private:

@@ -1,6 +1,6 @@
-// linked list based stack
-
 #include "stack.h"
+
+// linked list based stack
 
 LinkedListStack::LinkedListStack(){
     top = nullptr; 
@@ -24,7 +24,7 @@ int LinkedListStack::pop(){
     return -1; 
 }
 
-// array based stack (size & capacity)---------------------------------------
+// array based stack (size & capacity) ---------------------------------------
 // unbounded
 
 ArrayStack::ArrayStack(){

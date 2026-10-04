@@ -19,6 +19,6 @@ C++ implementations I learned in COSC 2436
 - Merge sort O(nlogn)
 - Heap sort O(nlogn)
 
-### Stacks & Queues
+### Stacks & Queues (linked lists, arrays)
 - Stacks (LIFO)
 - Queues (FIFO)

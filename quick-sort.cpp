@@ -36,21 +36,7 @@ void quickSort(int arr[], int low, int high){
     quickSort(arr, pivot + 1, high); //right side
 }
 
-int quickSelect(int arr[], int low, int high, int k){ //only partially sorts array; returns kth smallest element in array; ex: k = 0 returns smallest element, k = 1 returns second smallest element
-    if(low >= high){
-        return arr[low]; //return if 0 or 1 elements to sort
-    }
-
-    int lastLow = partition(arr, low, high); 
-
-    if(k <= lastLow){
-        return quickSelect(arr, low, lastLow, k); //if k less than index of lastLow, recur left side
-    }
-
-    return quickSelect(arr, lastLow + 1, high, k); //else recur right side
-}
-
-void anotherQuickSort(int* array, int low, int high){
+void rightMostQuickSort(int* array, int low, int high){
     if(low >= high){ //return if nothing to sort
         return;
     }
@@ -71,6 +57,20 @@ void anotherQuickSort(int* array, int low, int high){
     pivotIndex = tempIndex; 
     //
 
-    anotherQuickSort(array, low, pivotIndex-1); //sort left
-    anotherQuickSort(array, pivotIndex+1, high); //sort right
+    rightMostQuickSort(array, low, pivotIndex-1); //sort left
+    rightMostQuickSort(array, pivotIndex+1, high); //sort right
+}
+
+int quickSelect(int arr[], int low, int high, int k){ //only partially sorts array; returns kth smallest element in array; ex: k = 0 returns smallest element, k = 1 returns second smallest element
+    if(low >= high){
+        return arr[low]; //return if 0 or 1 elements to sort
+    }
+
+    int lastLow = partition(arr, low, high); 
+
+    if(k <= lastLow){
+        return quickSelect(arr, low, lastLow, k); //if k less than index of lastLow, recur left side
+    }
+
+    return quickSelect(arr, lastLow + 1, high, k); //else recur right side
 }
